@@ -19,8 +19,8 @@ a {
 }
 
 .topNavBar {
-  margin: 20px auto;  
-  width: 1520px;
+  margin: 0 auto; 
+  padding: 20px 16px; 
 }
 .topNavBar .logo {
   float: left;
