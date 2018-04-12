@@ -67,7 +67,7 @@ a {
 }
 .banner {
   height: 515px;
-  background-image: url(../img/bg_top.jpg);
+  background-image: url(./img/bg_top.jpg);
   background-position: center center;
   background-size: cover;
 }
