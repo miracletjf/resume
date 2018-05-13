@@ -1,310 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <script src="//at.alicdn.com/t/font_625066_bdn17sn0m9m5cdi.js"></script>
-  <title>my resume</title>
-  <style type="text/css">
-    .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="loading.css">
+<script src="//at.alicdn.com/t/font_625066_bdn17sn0m9m5cdi.js"></script>
+<!--缓动动画-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+<title>my resume</title>
+<style type="text/css">
+  .icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
 </style>
 </head>
 <body onscroll="topNavBarChange()" onload="topNavBarChange()">
-<div class="loadingWrap"><span class="loading"></span></div>
+<div class="loadingWrap active" id="loading"><span class="loading"></span></div>
 <div class="topNavBar clearfix" id="top_nav_bar">
-    <a class="logo clearfix" href="#">
-      <span class="rs">RS</span>
-      <span class="card-text">card</span>
-    </a>
-    <nav>
-      <ul class="clearfix">
-        <li><a href="about">关于</a></li>
-        <li><a href="skills">技能</a></li>
-        <li><a href="production">作品</a></li>
-        <li><a href="blog">博客</a></li>
-        <li><a href="menology">日历</a></li>
-        <li><a href="contact">联系方式</a></li>
-        <li><a href="other">其他</a></li>
-      </ul>
-    </nav>
+  <a class="logo clearfix" href="#">
+    <span class="rs">RS</span>
+    <span class="card-text">card</span>
+  </a>
+  <nav class="menu">
+    <ul class="clearfix">
+      <li class="menuTigger">
+        <a href="#card">关于</a>
+        <ul class="subMenu">
+          <li>第一个</li>
+          <li>第二个</li>
+          <li>第三个</li>
+        </ul>
+      </li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#portfolio">作品</a></li>
+      <li><a href="#blog">博客</a></li>
+      <li><a href="#menology">日历</a></li>
+      <li><a href="#contact">联系方式</a></li>
+      <li><a href="#other">其他</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="banner"><div class="mask"></div></div>
+<main>
+  <div class="card" id="card">
+    <div class="pictureAndText clearfix">
+      <div class="picture">
+        <img src="./img/avatar.jpg" alt="head portrait">
+      </div>
+      <div class="text">
+        <span class="hello">hello</span>
+        <h1>汤井福</h1>
+        <p>Web前端开发工程师</p>
+        <hr>
+        <dl>
+          <dt>年龄</dt>
+          <dd>25</dd>
+          <dt>所在城市</dd>
+          <dd>杭州</dt>
+          <dt>E-MAIL</dd>
+          <dd>1398988546@qq.com</dt>
+          <dt>手机</dd>
+          <dd>13455667788</dt>
+          <dt>星座</dd>
+          <dd>巨蟹座</dt>
+          <dt>爱好</dd>
+          <dd>coding</dt>
+        </dl>
+      </div>
+    </div>
+    <footer class="media">
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-github"></use>
+      </svg>
+      </a>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-twitter"></use>
+      </svg>
+      </a>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-facebook"></use>
+      </svg>
+      </a>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-7"></use>
+      </svg>
+      </a>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-weixin"></use>
+      </svg>
+      </a>
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-ins"></use>
+      </svg>
+      </a>
+    </footer>
   </div>
-  <div class="banner"><div class="mask"></div></div>
-  <main>
-    <div class="card" id="card">
-      <div class="pictureAndText clearfix">
-        <div class="picture">
-          <img src="./img/avatar.jpg" alt="head portrait">
-        </div>
-        <div class="text">
-          <span class="hello">hello</span>
-          <h1>汤井福</h1>
-          <p>Web前端开发工程师</p>
-          <hr>
-          <dl>
-            <dt>年龄</dt>
-            <dd>25</dd>
-            <dt>所在城市</dd>
-            <dd>杭州</dt>
-            <dt>E-MAIL</dd>
-            <dd>1398988546@qq.com</dt>
-            <dt>手机</dd>
-            <dd>13455667788</dt>
-            <dt>星座</dd>
-            <dd>巨蟹座</dt>
-            <dt>爱好</dd>
-            <dd>coding</dt>
-          </dl>
-        </div>
-      </div>
-      <footer class="media">
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-github"></use>
-        </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-twitter"></use>
-        </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-facebook"></use>
-        </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-7"></use>
-        </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-weixin"></use>
-        </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-ins"></use>
-        </svg>
-        </a>
-      </footer>
-    </div>
-    <a href="./style-t.css" class="downLoad" target="_self" download>下载 PDF 简历</a>
-    <div class="self-introduction">
-      <p>
-        汤井福,前端开发工程师,喜欢学习新技术，为写出更加优雅的代码而奋斗。<br>
-        擅长擅长HTML，CSS，JavaScript。使用过jquer，Vue，Angular，Avalon等框架。
-      </p>
-    </div>
-  </main>
-  
-  <section class="skill">
-    <h2>技能</h2>
-    <ol class="clearfix">
-      <li>
-        <h3>HTML 5 &amp; CSS3</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 90%;"></div>
-        </div>
-      </li>
-      <li>
-        <h3>JavaScript</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 84%;"></div>
-        </div>
-      </li>
-      <li>
-        <h3>jQuery</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 70%;"></div>
-        </div>
-      </li>
-      <li>
-        <h3>Vue</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 60%;"></div>
-        </div>
-      </li>
-      <li>
-        <h3>React</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 50%;"></div>
-        </div>
-      </li>
-      <li>
-        <h3>HTTP</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 88%;"></div>
-        </div>
-      </li>
-    </ol>
-  </section>
+  <a href="./style-t.css" class="downLoad" target="_self" download>下载 PDF 简历</a>
+  <div class="self-introduction">
+    <p>
+      汤井福,前端开发工程师,喜欢学习新技术，为写出更加优雅的代码而奋斗。<br>
+      擅长擅长HTML，CSS，JavaScript。使用过jquer，Vue，Angular，Avalon等框架。
+    </p>
+  </div>
+</main>
 
-  <section class="portfolio">
-    <h2>作品集</h2>
-    <nav>
-      <ol class="clearfix">
-        <li onclick="portfolioSwitch(0)">全部</li>
-        <li onclick="portfolioSwitch(1)">框架</li>
-        <li onclick="portfolioSwitch(2)">原生JS & CSS</li>
-      </ol>
-      <div id="portfolioBar" class="bar">
-        <div class="bar-inner"></div>
+<section class="skill" id="skills">
+  <h2>技能</h2>
+  <ol class="clearfix">
+    <li>
+      <h3>HTML 5 &amp; CSS3</h3>
+      <div class="progressBar">
+        <div class="progress" style="width: 90%;"></div>
       </div>
-    </nav>
-    <div class="jobs clearfix">
-      <div class="item state1 big">
-        <div class="picture">
-          <img src="./img/photo-big1.jpg" alt="">
-        </div>
-	
-        <div class="content">
-          <h3>第一个项目</h3>
-          <h4>这是我的第一个项目</h4>
-          <ul class="operate clearfix">
-            <li>
-              <a href="" class="" title="查看详情">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-chakandatu"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="" title="预览项目">
+    </li>
+    <li>
+      <h3>JavaScript</h3>
+      <div class="progressBar">
+        <div class="progress" style="width: 84%;"></div>
+      </div>
+    </li>
+    <li>
+      <h3>jQuery</h3>
+      <div class="progressBar">
+        <div class="progress" style="width: 70%;"></div>
+      </div>
+    </li>
+    <li>
+      <h3>Vue</h3>
+      <div class="progressBar">
+        <div class="progress" style="width: 60%;"></div>
+      </div>
+    </li>
+    <li>
+      <h3>React</h3>
+      <div class="progressBar">
+        <div class="progress" style="width: 50%;"></div>
+      </div>
+    </li>
+    <li>
+      <h3>HTTP</h3>
+      <div class="progressBar">
+        <div class="progress" style="width: 88%;"></div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <h2>作品集</h2>
+  <nav>
+    <ol class="clearfix">
+      <li onclick="portfolioSwitch(0)">全部</li>
+      <li onclick="portfolioSwitch(1)">框架</li>
+      <li onclick="portfolioSwitch(2)">原生JS & CSS</li>
+    </ol>
+    <div id="portfolioBar" class="bar">
+      <div class="bar-inner"></div>
+    </div>
+  </nav>
+  <div class="jobs clearfix">
+    <div class="item state1 big">
+      <div class="picture">
+        <img src="./img/photo-big1.jpg" alt="">
+      </div>
+
+      <div class="content">
+        <h3>第一个项目</h3>
+        <h4>这是我的第一个项目</h4>
+        <ul class="operate clearfix">
+          <li>
+            <a href="" class="" title="查看详情">
               <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-yulan"></use>
+                <use xlink:href="#icon-chakandatu"></use>
               </svg>
             </a>
-            </li>
-            <li>
-              <a href="" class="" title="源码链接">
+          </li>
+          <li>
+            <a href="" class="" title="预览项目">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-yulan"></use>
+            </svg>
+          </a>
+          </li>
+          <li>
+            <a href="" class="" title="源码链接">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-lianjie"></use>
+            </svg>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="item state1 state2 small">
+      <div class="picture">
+        <img src="./img/photo-small2.jpg" alt="">
+      </div>
+      <div class="content">
+        <h3>第二个项目</h3>
+        <h4>这是我的第二个项目</h4>
+        <ul class="operate clearfix">
+          <li>
+            <a href="" class="" title="查看详情">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-chakandatu"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="" title="源码链接">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-lianjie"></use>
               </svg>
             </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="item state1 state2 small">
-        <div class="picture">
-          <img src="./img/photo-small2.jpg" alt="">
-        </div>
-        <div class="content">
-          <h3>第二个项目</h3>
-          <h4>这是我的第二个项目</h4>
-          <ul class="operate clearfix">
-            <li>
-              <a href="" class="" title="查看详情">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-chakandatu"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="" title="源码链接">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-lianjie"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="item state2 small">
-        <div class="picture">
-          <img src="./img/photo-small1.jpg" alt="">
-        </div>
-        <div class="content">
-          <h3>第三个项目</h3>
-          <h4>这是我的第三个项目</h4>
-          <ul class="operate clearfix">
-            <li>
-              <a href="" class="" title="查看详情">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-chakandatu"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="" title="源码链接">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-lianjie"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
-  <script>
-    /*作品集，动画*/
-      function portfolioSwitch(state) {
-          if(state === 0){
-              portfolioBar.className = "bar";
-              var nodes1 = document.querySelectorAll('.jobs .item');
-              changeClassName(nodes1,"remove", "hide");
-          }else if(state === 1){
-              portfolioBar.className = "bar state-1";
-              var nodes1 = document.querySelectorAll('.jobs .item');
-              var nodes2 = document.querySelectorAll('.jobs .state1');
-              changeClassName(nodes1,"add", "hide");
-              changeClassName(nodes2,"remove", "hide");
+    <div class="item state2 small">
+      <div class="picture">
+        <img src="./img/photo-small1.jpg" alt="">
+      </div>
+      <div class="content">
+        <h3>第三个项目</h3>
+        <h4>这是我的第三个项目</h4>
+        <ul class="operate clearfix">
+          <li>
+            <a href="" class="" title="查看详情">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-chakandatu"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="" title="源码链接">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-lianjie"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  setTimeout(function () {
+    document.getElementById('loading').classList.remove('active');
+  },0);
+  /*头部滚动条效果切换*/
+  function topNavBarChange() {
+    let sTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if(sTop > 0){
+      document.getElementById('top_nav_bar').classList.add('active');
+      document.getElementById('card').classList.add('active');
+    }else{
+      document.getElementById('top_nav_bar').classList.remove('active');
+      document.getElementById('card').classList.remove('active');
+    }
+  }
+  /*头部子菜单隐藏，出现*/
+  let tags = document.getElementsByClassName('menuTigger');
+  for(let i = 0; i<tags.length;i++){
+    let tag = tags[i];
+    tag.onmouseenter = function (event) {
+      let li = event.currentTarget;
+      li.getElementsByTagName('ul')[0].classList.add('active');
+    };
+    tag.onmouseleave = function (event) {
+      let li = event.currentTarget;
+      li.getElementsByTagName('ul')[0].classList.remove('active');
+    }
+  }
 
-          }else {
-              portfolioBar.className = "bar state-2";
-              var nodes1 = document.querySelectorAll('.jobs .item');
-              var nodes2 = document.querySelectorAll('.jobs .state2');
-              changeClassName(nodes1,"add", "hide");
-              changeClassName(nodes2,"remove", "hide");
-          }
-      }
+  function animate(time) {
+    requestAnimationFrame(animate);
+    TWEEN.update(time);
+  }
+  requestAnimationFrame(animate);
 
-      /*头部滚动条效果切换*/
-      function topNavBarChange() {
-          var sTop = document.documentElement.scrollTop || document.body.scrollTop;
-          if(sTop > 0){
-              document.getElementById('top_nav_bar').className = 'topNavBar active';
-              document.getElementById('card').className = 'card active';
-          }else{
-              document.getElementById('top_nav_bar').className = 'topNavBar';
-              document.getElementById('card').className = 'card';
-          }
-      }
-
-      /*操作className*/
-      function changeClassName(nodes,type,value) {
-        if(type==="add"){
-            for(var i =0 ;i<nodes.length;i++){
-                var node = nodes[i];
-                var classArr = node.className.split(' ');
-                if(classArr.indexOf(value) === -1){
-                    node.className = node.className + ' '+value;
-                }
-            }
-        }else if(type === 'remove'){
-            for(var i =0 ;i<nodes.length;i++){
-                var node = nodes[i];
-                var classArr = node.className.split(' ');
-                if(classArr.indexOf(value) !== -1){
-                    var index = classArr.indexOf(value);
-                    classArr.splice(index,1);
-                    node.className = classArr.join(' ');
-                }
-            }
-        }
-      }
-
-
-
-  </script>
+  /*控制滚动*/
+  let aTags = document.querySelectorAll('nav.menu > ul > li > a');
+  for(let i =0 ;i <aTags.length;i++){
+    aTags[i].onclick = function (event) {
+      event.preventDefault();
+      let attr = event.target.getAttribute('href');
+      console.log(attr);
+      let element = document.querySelector(attr);
+      let top = element.offsetTop;
+      let currentTop = window.scrollY;
+      let targetTop = top - 80;
+      let t = Math.abs(targetTop - currentTop)/100;
+      var coords = { y: currentTop};
+      var tween = new TWEEN.Tween(coords)
+        .to({ y: targetTop}, t*200)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(function() {
+          window.scrollTo(0,coords.y);
+        })
+        .start();
+    }
+  }
+</script>
 </body>
 </html>
