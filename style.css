@@ -21,7 +21,8 @@ section {transition: all 0.4s ease;}
 .topNavBar.active nav > ul > li {color: #3D4451;}
 .topNavBar nav > ul > li a {position: relative;display: block;padding: 13px 0;font-size: 12px;font-weight: bold;}
 .topNavBar nav > ul > li a:after {content: "";position: absolute;display: block;left: 0;bottom: 0;width: 0;height: 3px;background: #E8676B;transition: all 0.3s ease;}
-.topNavBar nav > ul > li a:hover:after {width: 100%;}
+.topNavBar nav > ul > li a.highLight:after,
+.topNavBar nav > ul > li a.active:after{width: 100%;}
 .subMenu {
   position: absolute;
   display: none;
@@ -48,6 +49,17 @@ section {transition: all 0.4s ease;}
   padding: 2px 20px;
   line-height: 24px;
   font-size: 14px;
+}
+@keyframes slideUp {
+  0%{transform: translateY(30px)}
+  0%{transform: translateY(0)}
+}
+[data-special].offset {
+  transform: translateY(50px);
+}
+[data-special]{
+  transform: translateY(0);
+  transition: all 0.5s;
 }
 .banner {height: 515px;background-image: url(./img/bg_top.jpg);background-position: center center;background-size: cover;}
 .banner .mask {height: 100%;background: rgba(44, 51, 64, 0.8);}
@@ -77,8 +89,11 @@ section.skill {margin: 40px auto;width: 930px;}
 .skill ol {padding: 34px 35px 20px;background: #fff;box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.37);}
 .skill ol li {float: left;padding: 0 15px;margin-bottom: 30px;width: 50%;box-sizing: border-box;}
 .skill h3 {font-size: 12px;line-height: 2;color: #3D4451;}
-.skill .progressBar {position: relative;width: 100%;height: 5px;background: #FAE1E1;border-radius: 3px;}
-.skill .progressBar .progress {position: absolute;left: 0;top: 0;width: 50%;height: 100%;background: #E8676B;border-radius: 3px;}
+.skill .progressBar {position: relative;width: 100%;height: 5px;background: #FAE1E1;border-radius: 3px; overflow: hidden;}
+.skill .progressBar .progress {position: absolute;left: 0;top: 0;width: 50%;height: 100%;background: #E8676B;border-radius: 3px;transform: translateX(0);transition: all 0.5s;}
+.skill.offset .progressBar .progress{
+  transform: translateX(-100%);
+}
 section.portfolio {margin: 76px auto 40px;width: 930px;}
 .portfolio h2{margin-bottom: 32px;font-size: 28px;letter-spacing: 0.5em;text-indent: 0.5em;text-align: center;}
 .portfolio nav {text-align: center;}
