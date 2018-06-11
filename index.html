@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="loading.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/loading.css">
 <script src="//at.alicdn.com/t/font_625066_bdn17sn0m9m5cdi.js"></script>
 <!--缓动动画-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
@@ -15,7 +15,7 @@
 </style>
 </head>
 <body>
-<!--<div class="loadingWrap active" id="loading"><span class="loading"></span></div>-->
+<div class="loadingWrap active" id="loading"><span class="loading"></span></div>
 <div class="topNavBar clearfix" id="top_nav_bar">
   <a class="logo clearfix" href="#">
     <span class="rs">RS</span>
@@ -251,9 +251,9 @@
   </div>
 </section>
 <script>
-/*  setTimeout(function () {
+ setTimeout(function () {
     document.getElementById('loading').classList.remove('active');
-  }, 0);*/
+  }, 0);
   //添加offset
   let specialTags = document.querySelectorAll('[data-special]');
   for (let i = 0; i < specialTags.length; i++) {
@@ -266,7 +266,7 @@
   /*监听加载*/
   window.onload = function () {
     topNavBarChange()
-  }
+  };
   /*监听滚动*/
   window.onscroll = function () {
     topNavBarChange();
