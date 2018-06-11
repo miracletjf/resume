@@ -251,9 +251,7 @@
   </div>
 </section>
 <script>
- setTimeout(function () {
-    document.getElementById('loading').classList.remove('active');
-  }, 0);
+
   //添加offset
   let specialTags = document.querySelectorAll('[data-special]');
   for (let i = 0; i < specialTags.length; i++) {
@@ -265,6 +263,7 @@
   },100);
   /*监听加载*/
   window.onload = function () {
+    document.getElementById('loading').classList.remove('active');
     topNavBarChange()
   };
   /*监听滚动*/
