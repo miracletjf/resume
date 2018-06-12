@@ -9,7 +9,7 @@
 <!-- swiper -->
 <link rel="stylesheet" href="./plug-in/swiper/dist/css/swiper.css">
 <script src="./plug-in/swiper/dist/js/swiper.js"></script>
-<script src="//at.alicdn.com/t/font_625066_bdn17sn0m9m5cdi.js"></script>
+<script src="//at.alicdn.com/t/font_625066_35bebqbhb42.js"></script>
 <!--缓动动画-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 <title>my resume</title>
@@ -160,19 +160,29 @@
   <div class="jobs">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">
+          <img src="./img/slider-img1.png" alt="我的书签">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/slider-img3.jpg" alt="我的画板">          
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/slider-img2.png" alt="苹果风格轮播">          
+        </div>
       </div>
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
-      
-      <!-- 如果需要导航按钮 -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-      
-      <!-- 如果需要滚动条 -->
-      <div class="swiper-scrollbar"></div>
+      <div class="button-box">
+      <!-- 如果需要导航按钮 -->        
+        <div class="button prev">
+          <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-iconfonti"></use>
+          </svg>
+        </div>
+        <div class="button next">
+          <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-iconfonti"></use>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -183,24 +193,11 @@
 <script src="./js/navBarClickScroll.js"></script>
 <script>
   var mySwiper = new Swiper ('.swiper-container', {
-    direction: 'vertical',
     loop: true,
-    
-    // 如果需要分页器
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    
-    // 如果需要前进后退按钮
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    
-    // 如果需要滚动条
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+      nextEl: '.button.next',
+      prevEl: '.button.prev',
+    }
   })        
 </script>
 </body>
