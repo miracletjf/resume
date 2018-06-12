@@ -25,6 +25,7 @@ section {transition: all 0.4s ease;}
 .topNavBar nav > ul > li a {position: relative;display: block;padding: 13px 0;font-size: 12px;font-weight: bold;}
 .topNavBar nav > ul > li a:after {content: "";position: absolute;display: block;left: 0;bottom: 0;width: 0;height: 3px;background: #E8676B;transition: all 0.3s ease;}
 .topNavBar nav > ul > li a.highLight:after,
+.topNavBar nav > ul > li a:hover:after,
 .topNavBar nav > ul > li a.active:after{width: 100%;}
 .subMenu {position: absolute;display: none;top: 100%;right: 0;padding: 5px 0;color: #333;background: #fff;border: solid 1px #eee;box-shadow: 0 0 6px -2px #aaa;}
 .subMenu.active {margin-right: 0;display: block;animation: subMenuSlide 0.3s ease;}
@@ -64,31 +65,8 @@ section.skill {margin: 40px auto;width: 930px;}
 .skill.offset .progressBar .progress{transform: translateX(-100%);}
 section.portfolio {margin: 76px auto 40px;width: 930px;}
 .portfolio h2{margin-bottom: 32px;font-size: 28px;letter-spacing: 0.5em;text-indent: 0.5em;text-align: center;}
-.portfolio nav {text-align: center;}
-.portfolio nav ol {display: inline-block;}
-.portfolio nav ol li {float: left;font-size: 13px;margin: 0 24px;cursor: pointer;}
-.portfolio nav .bar {position: relative;display: block;width: 233px;margin: 12px auto;background: #fff;height: 5px;border-radius: 3px;}
-.portfolio .bar .bar-inner {position: absolute;width: 50px;height: 100%;left: 0;top: 0;border-radius: 3px;background: #E8676B;transition: all 0.4s ease;}
-.portfolio .bar.state-1 .bar-inner {width: 56px;left: 63px;}
-.portfolio .bar.state-2 .bar-inner {width: 94px;left: 139px;}
 .portfolio .jobs {margin-top: 30px;}
-.portfolio .jobs .item {position: relative;float: left;margin: 0 10px 20px;transform: scale(1);box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.37);transition: all 0.4s ease-in-out;overflow: hidden;}
-.portfolio .jobs .item.hide {margin: 0;transform: scale(0);width: 0!important;height: 0!important;}
-.portfolio .jobs .item::before {content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.13) 0%,rgba(0,0,0,0.63) 100%);z-index: 2;}
-.portfolio .jobs .item  .picture {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
-.portfolio .jobs img {width: 100%;height: 100%;}
-.portfolio .jobs .item.big {width: 600px;height: 570px;}
-.portfolio .jobs .item.small {width: 290px;height: 275px;}
-.portfolio .jobs .content {position: absolute;left: 0;right: 0;padding: 0 30px;top: 100%;margin-top: -105px;z-index: 5;transition: all 0.3s ease;}
-.portfolio .jobs .item:hover .content {margin-top: -165px;}
-.portfolio .jobs .content h3 {margin-top: 5px;font-size: 19px;line-height: 40px;color: #ffffff;}
-.portfolio .jobs .content h4 {margin-top: 9px;line-height: 20px;color: rgba(255,255,255,.5);font-size: 12px;}
-.portfolio .jobs .content .operate {margin-top: 20px;}
-.portfolio .jobs .content .operate li {float: left;margin-right: 21px;}
-.portfolio .jobs .content .operate a {display: block;padding: 12px;text-align: center;border: solid 1px rgba(255,255,255,.5);border-radius: 3px;margin-top: 100px;}
-.portfolio .jobs .item:hover .content .operate a {margin-top: 0;transition: all 0.4s ease;}
-.portfolio .jobs .item:hover .content .operate li:nth-child(2) a {transition-delay: 0.1s;}
-.portfolio .jobs .item:hover .content .operate li:nth-child(3) a {transition-delay: 0.2s;}
-.portfolio .jobs .content .operate a:hover {background: rgba(255,255,255,0.1);}
-.portfolio .jobs .content .operate svg {display: inline-block;width: 24px;height: 22px;fill: #E8676B;}
+.portfolio .swiper-container {
+  width: 930px;
+  height: 580px;
+}
