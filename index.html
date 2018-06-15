@@ -6,6 +6,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/loading.css">
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.2/dist/av-min.js"></script>
+<!-- 实时消息服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.0.1/dist/realtime.browser.min.js"></script>
 <!-- swiper -->
 <link rel="stylesheet" href="./plug-in/swiper/dist/css/swiper.css">
 <script src="./plug-in/swiper/dist/js/swiper.js"></script>
@@ -186,19 +190,27 @@
     </div>
   </div>
 </section>
+<section class="message" id="message">
+  <h2>留言</h2>
+  <ol class="message-list" id="message_list"></ol>
+  <form class="message-form" id="message_form">
+    <label for="">
+      <span class="text">姓名：</span>
+      <input type="text" name="userName" class="ipt">
+    </label>
+    <label for="">
+      <span class="text">内容：</span>
+      <textarea name="content" class="textarea"></textarea>
+    </label>
+    <button class="btn">提交</button>
+  </form>
+</section>
 <script src="./js/loading.js"></script>
 <script src="./js/topNavBarChange.js"></script>
 <script src="./js/scrollHander.js"></script>
 <script src="./js/toggleSubMenu.js"></script>
 <script src="./js/navBarClickScroll.js"></script>
-<script>
-  var mySwiper = new Swiper ('.swiper-container', {
-    loop: true,
-    navigation: {
-      nextEl: '.button.next',
-      prevEl: '.button.prev',
-    }
-  })        
-</script>
+<script src="./js/useSwiper.js"></script>
+<script src="./js/useAv.js"></script>
 </body>
 </html>
